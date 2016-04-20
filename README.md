@@ -1,4 +1,4 @@
-# wordwrap
+# wordwrap [![Build Status](https://travis-ci.org/smikhalevski/wordwrap.svg)](https://travis-ci.org/smikhalevski/wordwrap)
 
 RegExp-based super-tiny wordwrap script.
 
