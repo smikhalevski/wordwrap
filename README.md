@@ -9,7 +9,8 @@ wordwrap(
   '   Lorem ipsum dolor sit amet.\n' +
   '                                ' +
   '   Duis aute irure dolor in reprehenderit in voluptate.',
-  20);
+  20,
+  false); // Disable breaknig long lines
 
 // → [
 //   '   Lorem ipsum dolor',
