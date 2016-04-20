@@ -1,0 +1,39 @@
+{
+  "name": "wordwrap",
+  "version": "0.0.1",
+  "author": "Savva Mikhalevski",
+  "description": "Yet another wordwrap script.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smikhalevski/wordwrap.git"
+  },
+  "homepage": "https://github.com/smikhalevski/wordwrap",
+  "main": "target/index.js",
+  "files": [
+    "src/",
+    "target/index.js",
+    ".babelrc"
+  ],
+  "keywords": [
+    "wordwrap",
+    "string",
+    "wrap"
+  ],
+  "scripts": {
+    "package": "webpack --p",
+    "pretest": "webpack --d --config webpack.test.config.js",
+    "test": "jasmine-node --matchall --test-dir target/test/"
+  },
+  "devDependencies": {
+    "glob": "",
+
+    "webpack": "1.12.9",
+    "babel-loader": "6.2.0",
+    "babel-core": "6.3.26",
+    "babel-preset-es2015": "",
+
+    "jasmine": "",
+    "jasmine-node": ""
+  }
+}
