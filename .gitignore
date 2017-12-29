@@ -1,9 +1,8 @@
 # Paths
 node/
 node_modules/
-target/
-typings/
 npm-debug.log
+package-lock.json
 
 # IDE
 .idea/

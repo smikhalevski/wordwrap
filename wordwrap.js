@@ -9,7 +9,7 @@
  * @name wordwrap
  * @param {String} val Text to wrap.
  * @param {Number} length Maximum number of characters in line.
- * @param {Boolean} [crop = false] If set to `true`, value is always
+ * @param {Boolean} [breakWord = false] If set to `true`, value is always
  *        wrapped at or before the specified width. So if you have
  *        a word that is larger than the given width, it is broken
  *        apart. If `false` the function does not split the word even
@@ -33,13 +33,13 @@
  * //   'voluptate.'
  * // ]
  */
-export function wordwrap (val, length, crop = false) {
-  if (val == null) {
-    return [];
-  }
+module.exports = function wordwrap(val, length, breakWord = false) {
   length--;
-  // Line begins after newline or non-space char.
-  // Line ends before space char of end of line.
-  var re = `(?=^|\\S)(.{0,${length}}\\S(?=\\s|$)${crop ? `|.{${length}}\\S` : ''}|.*?(?=\\s|$))`;
-  return String(val).match(new RegExp(re, 'gm'));
-}
+  if (val != null && length > 0) {
+    // Line begins after newline or non-space char.
+    // Line ends before space char of end of line.
+    var re = `(?=^|\\S)(.{0,${length}}\\S(?=\\s|$)${breakWord ? `|.{${length}}\\S` : ''}|.*?(?=\\s|$))`;
+    return String(val).match(new RegExp(re, 'gm'));
+  }
+  return [];
+};

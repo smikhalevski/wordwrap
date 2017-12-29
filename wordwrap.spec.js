@@ -1,4 +1,4 @@
-import {wordwrap} from './wordwrap';
+const wordwrap = require('./wordwrap');
 
 describe('wordwrap', () => {
 
